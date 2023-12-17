@@ -3,7 +3,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n"; // Import your i18n configuration
 
 import Home from "./pages/Home";
-import Descriptions from "./pages/Descriptions";
+import Description from "./pages/Description";
 import Contact from "./pages/Contact";
 import Notices from "./pages/Notices";
 
@@ -12,7 +12,7 @@ function App() {
     <I18nextProvider i18n={i18n}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/descriptions" element={<Descriptions />} />
+        <Route path="/description" element={<Description />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/notices" element={<Notices />} />
       </Routes>

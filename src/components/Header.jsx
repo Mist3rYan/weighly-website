@@ -23,7 +23,7 @@ function Header () {
                                 <a href="/">{t('Home')}</a>
                             </li>
                             <li>
-                                <a href="/descriptions">Descriptions</a>
+                                <a href="/description">Description</a>
                             </li>
                             <li>
                                 <a href="/contact">Contact</a>

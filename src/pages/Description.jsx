@@ -10,7 +10,7 @@ function Descriptions() {
       <div
         className="flex flex-col items-center justify-around max-w-screen-xl"
         style={{
-          backgroundImage: "url(./images/3.png)", // ou "url(/images/bg.jpg)
+          backgroundImage: "url(/images/3.png)", // ou "url(/images/bg.jpg)
           backgroundSize: "contain", // ajustez selon vos besoins (peut également essayer "100% 100%")
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center", // assurez-vous que l'image est centrée
@@ -25,7 +25,7 @@ function Descriptions() {
           <div className="flex flex-col bg-black w-1/3 p-5 bg-opacity-50">
           <div className="rounded-full p-2 flex items-center justify-center mx-auto h-20 w-20" style={{ background: 'linear-gradient(to right, #EE798A, #EA4335)' }}>
           <img
-            src="./images/heart-rate.png"
+            src="/images/heart-rate.png"
             alt="heart"
             color="primary-color"
             width={50}
@@ -39,7 +39,7 @@ function Descriptions() {
           <div className="flex flex-col bg-black w-1/3 p-5 bg-opacity-50">
           <div className="rounded-full p-2 flex items-center justify-center mx-auto h-20 w-20" style={{ background: 'linear-gradient(to right, #EE798A, #EA4335)' }}>
           <img
-            src="./images/search.png"
+            src="/images/search.png"
             alt="search"
             color="primary-color"
             width={40}
@@ -53,7 +53,7 @@ function Descriptions() {
           <div className="flex flex-col bg-black w-1/3 p-5 bg-opacity-50">
           <div className="rounded-full p-2 flex items-center justify-center mx-auto h-20 w-20" style={{ background: 'linear-gradient(to right, #EE798A, #EA4335)' }}>
           <img
-            src="./images/pen.png"
+            src="/images/pen.png"
             alt="pen"
             width={40}
             height={40}
