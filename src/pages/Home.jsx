@@ -11,7 +11,7 @@ function Home() {
           <div className="rounded-full bg-tertiary-color w-[500px] h-[500px] filter blur-3xl brightness-125 saturate-150"></div>
         </div>
         <div className="flex flex-col md:flex-row items-center max-w-screen-xl  relative z-20">
-          <div className="flex flex-col gap-5  items-center md:items-start md:w-1/2 text-left ml-6">
+          <div className="flex flex-col md:gap-5 items-center md:items-start md:w-1/2 text-left md:ml-6">
             <img
               src="/images/2.png"
               alt="vague"
@@ -28,16 +28,16 @@ function Home() {
             <h3 className="text-primary-color md:text-3xl font-bold">
             {t('Everything_starts_here')}
             </h3>
-            <a href="/contact">
+            <a href="/contact" className=" max-[765px]:order-first">
               <img
                 src="/images/google-badge.png"
                 alt="Badge Android"
                 width={200}
-                className="my-5 max-w-full"
+                className="max-w-full"
               />
             </a>
           </div>
-          <div className="flex flex-col items-center md:items-end md:w-1/2 w-full">
+          <div className="flex flex-col items-center md:items-end md:w-1/2 w-full max-[765px]:order-first">
             <img src="/images/1.png" alt="Img1" className="md:w-10/12 w-1/3" />
           </div>
         </div>
