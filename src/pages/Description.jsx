@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 function Descriptions() {
   const { t } = useTranslation();
     return (
-        <div className="bg-secondary-color mt-10 md:mt-0">
+        <div className="bg-secondary-color">
         <Header />
         <section className="flex justify-center md:h-screen bg-secondary-color ">
       <div
