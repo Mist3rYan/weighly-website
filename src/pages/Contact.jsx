@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 function Contact() {
   const { t } = useTranslation();
   return (
-    <div className="bg-secondary-color ">
+    <div className="bg-secondary-color mt-10 md:mt-0">
       <Header />
             <section className="flex justify-center h-screen bg-secondary-color">
           <div

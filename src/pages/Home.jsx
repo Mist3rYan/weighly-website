@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="bg-secondary-color ">
       <Header />
-      <section className="flex justify-center h-screen bg-secondary-color ">
+      <section className="flex justify-center h-screen bg-secondary-color mt-10 md:mt-0">
         <div className="fixed top-10 left-2/3 transform -translate-x-2/3 opacity-70  z-10">
           <div className="rounded-full bg-tertiary-color w-[500px] h-[500px] filter blur-3xl brightness-125 saturate-150"></div>
         </div>

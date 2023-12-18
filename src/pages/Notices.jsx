@@ -4,7 +4,7 @@ import { useTranslation,Trans } from 'react-i18next';
 function Notices() {
   const { t } = useTranslation();
     return (
-        <div className="bg-secondary-color ">
+        <div className="bg-secondary-color mt-10 md:mt-0">
         <Header />
         <section className="flex justify-center bg-secondary-color">
       <div
