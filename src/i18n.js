@@ -5,6 +5,8 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
+      send: "Send",
+      name: "Name",
       Home: "Home",
       Legal: "Legal Notices",
       Weight_tracking: "Weight tracking",
@@ -27,6 +29,8 @@ const resources = {
   },
   fr: {
     translation: {
+      send: "Envoyer",
+      name: "Nom",
       Home: "Accueil",
       Legal: "Mentions légales",
       Weight_tracking: "Suivi de poids",

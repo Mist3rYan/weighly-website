@@ -10,6 +10,7 @@ module.exports = {
         "quaternary-color": "#FFFFFF",
         "quinary-color": "#000000",
         "senary-color": "#EA4335",
+        "button-color": "#ED7F10",
       },
     },
   },

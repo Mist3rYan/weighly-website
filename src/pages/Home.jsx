@@ -26,7 +26,7 @@ function Home() {
               {t('Weight_tracking')}
             </h2>
             <h3 className="text-primary-color md:text-3xl font-bold">
-            {t('Everything_starts_here')}
+              {t('Everything_starts_here')}
             </h3>
             <a href="/contact" className=" max-[765px]:order-first">
               <img

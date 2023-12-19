@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ed7f10; /* Couleur de fond */
+  padding: 20px;
+  border: 1px solid #fff; /* Bordure blanche */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  color: #fff; /* Couleur du texte à l'intérieur du popup */
+  font-weight: bold; /* Texte en gras */
+}
+.popup button {
+  background-color: #fff; /* Couleur de fond du bouton */
+  color: #ed7f10; /* Couleur du texte du bouton */
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Coins arrondis du bouton */
+  margin-top: 10px; /* Espacement par rapport au texte du popup */
+}
