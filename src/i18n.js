@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
+      fermer : "Close",
       send: "Send",
       name: "Name",
       Home: "Home",
@@ -29,6 +30,7 @@ const resources = {
   },
   fr: {
     translation: {
+      fermer : "Fermer",
       send: "Envoyer",
       name: "Nom",
       Home: "Accueil",

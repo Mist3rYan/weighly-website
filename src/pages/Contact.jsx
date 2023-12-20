@@ -2,10 +2,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header";
 import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { Link } from "react-router-dom";
 
 function Contact() {
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
+  const [captcha, setCaptcha] = useState(false);
+  const reCAPTCHASecretKey = require("./reCAPTCHA_secret_key.js");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,13 +38,12 @@ function Contact() {
   const renderPopup = () => {
     if (message !== "") {
       return (
-        <div className="popup flex flex-col items-center">
+        <div className="popup flex flex-col items-center bg-secondary-color text-primary-color">
           <p>{message}</p>
-          <button
-            className="hover:bg-secondary-color hover:text-white "
-            onClick={() => setMessage("")}
-          >
-            Fermer
+          <button className="bg-button-color hover:text-primary-color text-secondary-color">
+            <Link to="/" onClick={() => setMessage("")}>
+              {t("fermer")}
+            </Link>
           </button>
         </div>
       );
@@ -62,14 +65,71 @@ function Contact() {
             height: "100%",
           }}
         >
-          <div className="flex flex-col justify-around bg-black h-2/3 p-5 m-5 opacity-80">
-            {/* Supprimez la ligne console.log suivante car elle est inutile */}
-            {/* console.log({renderPopup()}); */}
-
-            <p className="flex justify-center text-button-color text-sm md:text-2xl font-bold">
+          <div className="flex flex-col bg-secondary-color  md:w-2/3 p-5 m-5 border-2 border-primary-color">
+            <p className="flex justify-center md:justify-start text-primary-color text-sm md:text-2xl font-bold">
               {t("txt_contact")}
             </p>
-            <p className="flex flex-col md:flex-row justify-center items-center text-primary-color text-sm  md:text-xl font-bold ">
+            <p className="flex flex-wrap justify-center text-primary-color text-sm  md:text-2xl font-bold mt-5">
+              {t("slogan_contact")}
+            </p>
+            {/* Formulaire de contact */}
+            <form onSubmit={handleSubmit} className="flex flex-col">
+              <label
+                htmlFor="name"
+                className="text-tertiary-color md:text-xl font-bold mt-2"
+              >
+                {t("name")}
+              </label>
+              <input
+                className="p-2"
+                type="text"
+                id="username"
+                name="username"
+                required
+              />
+
+              <label
+                htmlFor="email"
+                className="text-tertiary-color md:text-xl font-bold mt-2"
+              >
+                Email
+              </label>
+              <input
+                className="p-2"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+
+              <label
+                htmlFor="message"
+                className="text-tertiary-color md:text-xl font-bold mt-2"
+              >
+                Message
+              </label>
+              <textarea
+                className="p-2"
+                id="message"
+                name="message"
+                rows="4"
+                required
+              />
+
+              <button
+                disabled={!captcha}
+                type="submit"
+                className="bg-button-color hover:text-primary-color font-bold p-2 rounded-md mt-3"
+              >
+                {t("send")}
+              </button>
+              <ReCAPTCHA
+                className="mt-3"
+                sitekey={reCAPTCHASecretKey}
+                onChange={(value) => setCaptcha(value)}
+              />
+            </form>
+            <p className="flex flex-col md:flex-row justify-center items-center text-primary-color text-sm  md:text-xl font-bold mt-5">
               <span className="flex flex-wrap items-center">
                 <img
                   src="/images/mail.png"
@@ -89,42 +149,6 @@ function Contact() {
                   Twitter
                 </a>
               </span>
-            </p>
-            {/* Formulaire de contact */}
-            <form onSubmit={handleSubmit} className="flex flex-col">
-              <label
-                htmlFor="name"
-                className="text-tertiary-color md:text-xl font-bold mt-2"
-              >
-                {t("name")}
-              </label>
-              <input type="text" id="username" name="username" required />
-
-              <label
-                htmlFor="email"
-                className="text-tertiary-color md:text-xl font-bold mt-2"
-              >
-                Email
-              </label>
-              <input type="email" id="email" name="email" required />
-
-              <label
-                htmlFor="message"
-                className="text-tertiary-color md:text-xl font-bold mt-2"
-              >
-                Message
-              </label>
-              <textarea id="message" name="message" rows="4" required />
-
-              <button
-                type="submit"
-                className="bg-button-color hover:bg-secondary-color hover:text-white font-bold p-2 rounded-md mt-3"
-              >
-                {t("send")}
-              </button>
-            </form>
-            <p className="flex flex-wrap justify-center text-primary-color text-sm  md:text-2xl font-bold">
-              {t("slogan_contact")}
             </p>
             <p className="flex justify-end text-tertiary-color text-sm md:text-xl font-bold">
               <a

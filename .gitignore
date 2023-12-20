@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore le fichier reCAPTCHA_secret_key.js dans le dossier src
+/src/reCAPTCHA_secret_key.js
