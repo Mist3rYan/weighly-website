@@ -9,7 +9,7 @@ function Contact() {
   const { t } = useTranslation();
   const [message, setMessage] = useState("");
   const [captcha, setCaptcha] = useState(false);
-  const reCAPTCHASecretKey = require("./reCAPTCHA_secret_key.js");
+  const reCAPTCHASecretKey = require("../reCAPTCHA_secret_key.js");
 
   const handleSubmit = async (event) => {
     event.preventDefault();

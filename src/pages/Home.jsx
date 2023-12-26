@@ -28,7 +28,7 @@ function Home() {
             <h3 className="text-primary-color md:text-3xl font-bold">
               {t('Everything_starts_here')}
             </h3>
-            <a href="/contact" className=" max-[765px]:order-first">
+            <a href="https://play.google.com/store/apps/details?id=com.mycodeapps.weighly" className=" max-[765px]:order-first">
               <img
                 src="/images/google-badge.png"
                 alt="Badge Android"
